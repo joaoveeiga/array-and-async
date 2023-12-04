@@ -1,0 +1,21 @@
+{
+  "lang": "en-us",
+  "name": "Array and Async Wiki",
+  "short_name": "Wiki - array/async",
+  "description": "This app is a wiki to learn Array and Async with JavaScript.",
+  "start_url": "/",
+  "background_color": "#2f3d58",
+  "theme_color": "#2f3d58",
+  "orientation": "any",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "logo-without-background.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512"
+    }
+  ]
+}

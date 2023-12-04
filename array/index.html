@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Wiki - Arrays em JavaScript</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <main>
+    <div class="nav-bar">
+      <img src="/logo-without-background.png" height="60px" />
+      <a href="/">Página Inicial</a>
+      <a href="/async">Funções assíncronas</a>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 content">
+          <h4>Explorando Arrays em JavaScript</h4>
+          <p>
+            Arrays são estruturas de dados poderosas em JavaScript, permitindo armazenar e manipular coleções de
+            elementos.
+            Nesta seção, exploraremos conceitos fundamentais, operações comuns e dicas úteis para trabalhar com Arrays.
+          </p>
+
+          <h5>Criação de Arrays</h5>
+          <pre><code>// Criando um array vazio
+  let meuArray = [];
+  
+  // Criando um array com elementos
+  let frutas = ['Maçã', 'Banana', 'Morango'];</code></pre>
+
+          <h5>Acesso a Elementos</h5>
+          <pre><code>// Acessando elementos por índice
+  let primeiraFruta = frutas[0]; // 'Maçã'
+  let segundaFruta = frutas[1]; // 'Banana'</code></pre>
+
+          <h5>Adição e Remoção de Elementos</h5>
+          <pre><code>// Adicionando elementos no final do array
+  frutas.push('Abacaxi');
+  
+  // Removendo o último elemento do array
+  let ultimaFrutaRemovida = frutas.pop();</code></pre>
+
+          <h5>Iteração com Arrays</h5>
+          <pre><code>// Usando for...of para iterar
+  for (let fruta of frutas) {
+    console.log(fruta);
+  }
+  
+  // Usando forEach para iterar
+  frutas.forEach(function(fruta) {
+    console.log(fruta);
+  });</code></pre>
+
+          <h5>Operações Avançadas</h5>
+          <pre><code>// Filtrando elementos que atendem a uma condição
+  let frutasQueComecamComM = frutas.filter(function(fruta) {
+    return fruta.startsWith('M');
+  });
+  
+  // Mapeando elementos para uma nova forma
+  let comprimentoDasFrutas = frutas.map(function(fruta) {
+    return fruta.length;
+  });
+  
+  // Reduzindo o array a um único valor
+  let comprimentoTotal = frutas.reduce(function(acumulador, fruta) {
+    return acumulador + fruta.length;
+  }, 0);</code></pre>
+
+          <h5>Conclusão</h5>
+          <p>
+            Arrays são uma parte essencial da programação JavaScript, oferecendo uma maneira eficiente de armazenar e
+            manipular dados. Compreender as operações básicas e avançadas em Arrays é fundamental para desenvolver
+            aplicações web robustas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

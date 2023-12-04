@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Wiki - Funções Assíncronas</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <main>
+    <div class="nav-bar">
+      <img id="home" src="/logo-without-background.png" height="60px" />
+      <a href="/">Página Inicial</a>
+      <a href="/array/">Array</a>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 content">
+          <h4>Introdução às Funções Assíncronas em JavaScript</h4>
+          <p>
+            As funções assíncronas são uma parte crucial da programação JavaScript moderna,
+            permitindo a execução de operações sem bloquear o fluxo principal do programa.
+            Elas são especialmente úteis ao lidar com tarefas que envolvem operações demoradas,
+            como chamadas de API, manipulação de arquivos e outras operações de I/O.
+          </p>
+  
+          <h5>Palavras-chave Principais</h5>
+          <pre><code>async function minhaFuncaoAssincrona() {
+    // Código assíncrono aqui
+  }</code></pre>
+  
+          <p>
+            A palavra-chave <code>async</code> antes de uma função indica que ela retornará uma Promessa.
+            Isso permite o uso da palavra-chave <code>await</code> dentro da função para pausar a execução
+            até que a Promessa seja resolvida.
+          </p>
+  
+          <h5>Exemplo de Uso</h5>
+          <pre><code>async function exemploAsync() {
+    try {
+      const resultado = await operacaoAssincrona();
+      console.log(resultado);
+    } catch (erro) {
+      console.error(erro.message);
+    }
+  }</code></pre>
+  
+          <p>
+            O bloco <code>try-catch</code> é frequentemente usado para lidar com erros em operações assíncronas.
+          </p>
+  
+          <h5>Utilizando <code>then</code> e <code>catch</code></h5>
+          <p>
+            Além do bloco <code>try-catch</code>, você também pode usar os métodos <code>then</code> e <code>catch</code>
+            para manipular o resultado de uma Promessa:
+          </p>
+  
+          <pre><code>function exemploThenCatch() {
+    operacaoAssincrona()
+      .then(resultado => {
+        console.log(resultado);
+      })
+      .catch(erro => {
+        console.error(erro.message);
+      });
+  }</code></pre>
+  
+          <p>
+            O método <code>then</code> é chamado quando a Promessa é resolvida com sucesso, enquanto o <code>catch</code>
+            é chamado em caso de erro.
+          </p>
+  
+          <h5>Conclusão</h5>
+          <p>
+            As funções assíncronas simplificam a escrita de código assíncrono em JavaScript,
+            tornando-o mais legível e fácil de manter. O uso de <code>then</code> e <code>catch</code> oferece uma
+            abordagem alternativa para manipular o resultado de Promessas e gerenciar erros de forma eficiente.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  </main>
+  <script src="/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
